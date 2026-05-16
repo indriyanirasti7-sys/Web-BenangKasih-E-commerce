@@ -1,0 +1,90 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
+
+class Product extends Model
+{
+    use HasFactory;
+ 
+    protected $fillable = [
+        'category_id',
+        'name',
+        'slug',
+        'description',
+        'material',
+        'yarn_type',
+        'yarn_weight',
+        'price',
+        'status',
+        'stock',
+        'estimated_days',
+        'size',
+        'colors',
+        'image',
+        'gallery',
+        'is_featured',
+        'is_active',
+        'sort_order',
+    ];
+ 
+    protected $casts = [
+        'colors'      => 'array',
+        'gallery'     => 'array',
+        'is_featured' => 'boolean',
+        'is_active'   => 'boolean',
+        'price'       => 'decimal:2',
+    ];
+ 
+    protected static function boot()
+    {
+        parent::boot();
+        static::creating(function ($product) {
+            if (empty($product->slug)) {
+                $product->slug = Str::slug($product->name);
+            }
+        });
+    }
+ 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+ 
+    public function getFormattedPriceAttribute()
+    {
+        return 'Rp ' . number_format($this->price, 0, ',', '.');
+    }
+ 
+    public function getStatusLabelAttribute()
+    {
+        return $this->status === 'ready_stock' ? 'Ready Stock' : 'Pre-Order';
+    }
+ 
+    public function getImageUrlAttribute()
+    {
+        if ($this->image) {
+            return asset('storage/' . $this->image);
+        }
+        return asset('images/placeholder.jpg');
+    }
+ 
+    public function getWhatsappMessageAttribute()
+    {
+        $msg = "Halo, saya tertarik dengan produk rajutan {$this->name}. Bisa info detail untuk pemesanannya?";
+        return urlencode($msg);
+    }
+ 
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
+ 
+    public function scopeFeatured($query)
+    {
+        return $query->where('is_featured', true);
+    }
+}
