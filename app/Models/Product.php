@@ -72,10 +72,37 @@ class Product extends Model
         return asset('images/placeholder.jpg');
     }
  
-    public function getWhatsappMessageAttribute()
+    public function getWhatsappMessageAttribute(): string
     {
-        $msg = "Halo, saya tertarik dengan produk rajutan {$this->name}. Bisa info detail untuk pemesanannya?";
-        return urlencode($msg);
+        $lines = [];
+        $lines[] = "Halo Kak! 👋";
+        $lines[] = "Saya tertarik dengan produk berikut:";
+        $lines[] = "";
+        $lines[] = "🧶 *{$this->name}*";
+        $lines[] = "📂 Kategori : {$this->category->name}";
+        $lines[] = "💰 Harga    : {$this->formatted_price}";
+        $lines[] = "📦 Status   : {$this->status_label}";
+
+        if ($this->size) {
+            $lines[] = "📏 Ukuran   : {$this->size}";
+        }
+        if ($this->colors) {
+            $lines[] = "🎨 Warna    : " . implode(', ', $this->colors);
+        }
+        if ($this->status === 'pre_order' && $this->estimated_days) {
+            $lines[] = "⏳ Estimasi : {$this->estimated_days} hari kerja";
+        }
+        if ($this->yarn_type) {
+            $lines[] = "🪡 Bahan    : {$this->yarn_type}";
+        }
+
+        $lines[] = "";
+        $lines[] = "🔗 Link Produk:";
+        $lines[] = url('/produk/' . $this->slug);
+        $lines[] = "";
+        $lines[] = "Bisa info lebih lanjut untuk pemesanannya? 🙏";
+
+        return urlencode(implode("\n", $lines));
     }
  
     public function scopeActive($query)

@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             ['category_id'=>2,'name'=>'Crop Top Crochet Summer','slug'=>'crop-top-crochet-summer','description'=>'Atasan crop rajutan dengan pola openwork yang cantik.','material'=>'Benang katun mercerized halus.','yarn_type'=>'Cotton Mercerized','yarn_weight'=>'DK Weight','price'=>320000,'status'=>'pre_order','stock'=>0,'estimated_days'=>12,'size'=>'XS/S/M/L','colors'=>['White','Cream','Sky Blue'],'is_featured'=>true,'is_active'=>true],
         ];
         foreach ($products as $p) Product::create($p);
+        
 
         // ── Users ────────────────────────────────────────────────────────────
         User::create(['name'=>'Admin Rajutan','email'=>'admin@rajutan.com','password'=>bcrypt('password'),'role'=>'admin']);

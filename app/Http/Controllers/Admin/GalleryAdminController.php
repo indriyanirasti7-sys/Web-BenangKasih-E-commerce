@@ -1,7 +1,6 @@
 <?php
-// app/Http/Controllers/Admin/GalleryAdminController.php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin;  // ← harus Admin
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
@@ -13,8 +12,15 @@ class GalleryAdminController extends Controller
 {
     public function index()
     {
-        $galleries = Gallery::with('product')->orderBy('sort_order')->paginate(20);
-        $products  = Product::active()->orderBy('name')->get();
+        $galleries = Gallery::with('product')
+                            ->orderBy('is_featured', 'desc')
+                            ->orderBy('sort_order')
+                            ->paginate(20);
+        $products  = Product::with('category')
+                            ->active()
+                            ->orderBy('name')
+                            ->get();
+
         return view('admin.gallery.index', compact('galleries', 'products'));
     }
 
@@ -26,23 +32,30 @@ class GalleryAdminController extends Controller
             'caption'    => 'nullable|string|max:255',
         ]);
 
+        $count = 0;
         foreach ($request->file('images') as $file) {
             Gallery::create([
                 'image'      => $file->store('gallery', 'public'),
-                'product_id' => $request->product_id,
+                'product_id' => $request->product_id ?: null,
                 'caption'    => $request->caption,
                 'alt'        => $request->caption ?? 'Foto rajutan handmade',
                 'is_featured'=> $request->boolean('is_featured'),
+                'sort_order' => 0,
             ]);
+            $count++;
         }
 
-        return back()->with('success', count($request->file('images')) . ' foto berhasil diupload!');
+        return back()->with('success', $count . ' foto berhasil diupload! 🎉');
     }
 
     public function destroy(Gallery $gallery)
     {
-        Storage::disk('public')->delete($gallery->image);
+        // Hapus file dari storage jika bukan URL
+        if (!str_starts_with($gallery->image, 'http')) {
+            Storage::disk('public')->delete($gallery->image);
+        }
         $gallery->delete();
-        return back()->with('success', 'Foto dihapus.');
+
+        return back()->with('success', 'Foto berhasil dihapus.');
     }
 }

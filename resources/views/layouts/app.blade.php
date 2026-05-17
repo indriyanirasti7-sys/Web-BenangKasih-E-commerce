@@ -180,16 +180,12 @@
 
             {{-- LOGO --}}
             <a href="{{ route('home') }}" class="flex items-center gap-3 group">
-                {{-- SVG Rajutan Logo --}}
-                <div class="w-10 h-10 rounded-full bg-[var(--terra)] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
-                        <path d="M18 4C10.268 4 4 10.268 4 18s6.268 14 14 14 14-6.268 14-14S25.732 4 18 4z" fill="rgba(255,255,255,.15)"/>
-                        <path d="M12 18c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M9 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
-                        <circle cx="18" cy="21" r="2.5" fill="white"/>
-                        <path d="M15.5 21c.5-1.5 1.2-2.8 2.5-3.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-                    </svg>
-                </div>
+
+                    {{-- Jika logo berbentuk lingkaran/icon --}}
+                <img src="{{ asset('images/logo.png') }}"
+                        alt="Logo Benang & Kasih"
+                        class="h-10 w-10 object-contain rounded-full
+                                group-hover:scale-105 transition-transform shadow-md">
                 <div class="leading-none">
                     <span class="font-display text-xl font-bold text-[var(--charcoal)] block">Benang & Kasih</span>
                     <span class="text-[10px] tracking-[.15em] text-[var(--mocha)] uppercase">Handmade Crochet</span>
@@ -198,7 +194,7 @@
 
             {{-- DESKTOP NAV --}}
             <div class="hidden lg:flex items-center gap-8">
-                <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
+                <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
                 <a href="{{ route('gallery') }}" class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}">Galeri</a>
 
                 {{-- Kategori Dropdown --}}
@@ -283,7 +279,7 @@
 
         {{-- MOBILE MENU --}}
         <div id="mobileMenu" class="lg:hidden hidden mt-4 bg-white rounded-2xl shadow-xl border border-[var(--cream-dark)] p-4 space-y-1">
-            <a href="{{ route('home') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm font-medium">🏠 Home</a>
+            <a href="{{ route('home') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm font-medium">🏠 Beranda</a>
             <a href="{{ route('gallery') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm font-medium">🖼 Galeri</a>
             @foreach($navCats as $nc)
             <a href="{{ route('home') }}?category={{ $nc->slug }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm">
