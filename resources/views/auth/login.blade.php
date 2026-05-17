@@ -6,8 +6,11 @@
             <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-[#F5EFE6] rounded-full blur-xl opacity-70"></div>
 
             <div class="relative text-center">
-                <div class="mx-auto h-16 w-16 bg-[#D4E2D5] rounded-full flex items-center justify-center text-3xl shadow-inner text-[#4A6B51]">
-                    🧶
+                {{-- GANTI bagian div icon tersebut dengan ini --}}
+                <div class="mx-auto h-16 w-16 rounded-full overflow-hidden shadow-md">
+                    <img src="{{ asset('images/logo.png') }}"
+                        alt="Logo Benang Kasih"
+                        class="w-full h-full object-cover">
                 </div>
                 <h2 class="mt-4 text-center text-2xl sm:text-3xl font-bold text-[#5C4033] tracking-tight">
                     Selamat Datang Kembali

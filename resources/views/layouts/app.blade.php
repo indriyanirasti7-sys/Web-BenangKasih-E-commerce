@@ -347,11 +347,11 @@
             <div class="md:col-span-4">
                 <div class="flex items-center gap-3 mb-5">
                     <div class="w-10 h-10 rounded-full bg-[var(--terra)] flex items-center justify-center">
-                        <svg viewBox="0 0 36 36" fill="none" class="w-6 h-6">
-                            <path d="M12 18c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M9 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
-                            <circle cx="18" cy="21" r="2.5" fill="white"/>
-                        </svg>
+                        <div class="w-10 h-10 rounded-full overflow-hidden shadow-md border-2 border-[#D4E2D5]">
+                            <img src="{{ asset('images/logo.png') }}"
+                                alt="Logo Benang Kasih"
+                                class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <div>
                         <div class="font-display text-xl font-bold text-[var(--terra-light)]">Benang & Kasih</div>

@@ -89,10 +89,9 @@
             {{-- Mobile logo --}}
             <div class="flex items-center gap-3 mb-6 lg:hidden">
                 <div class="w-9 h-9 rounded-full bg-[#8A9E7A] flex items-center justify-center">
-                    <svg viewBox="0 0 36 36" fill="none" class="w-5 h-5">
-                        <path d="M12 18c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        <circle cx="18" cy="21" r="2.5" fill="white"/>
-                    </svg>
+                    <img src="{{ asset('images/logo.png') }}"
+                        alt="Logo"
+                        class="h-9 w-9 object-contain rounded-full">
                 </div>
                 <span class="font-display text-lg font-bold text-gray-800">Benang & Kasih</span>
             </div>

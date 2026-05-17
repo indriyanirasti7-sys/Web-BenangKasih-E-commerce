@@ -55,17 +55,14 @@
                 </div>
                 <div class="hidden lg:flex justify-center">
                     <div class="relative w-[420px] h-[420px]">
-                        <div class="absolute inset-8 rounded-full bg-[var(--cream-dark)]/60 border-2 border-[var(--cream-dark)]"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
+                       <div class="relative w-[480px] h-[480px] flex items-center justify-center mb-8">
+                        <div class="absolute inset-4 rounded-full bg-[var(--cream-dark)]/60 border-2 border-[var(--cream-dark)]"></div>
                             <div class="w-72 h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white">
                                 {{-- Placeholder image --}}
                                 <div class="w-full h-full bg-gradient-to-br from-[var(--cream)] via-[var(--terra-light)]/30 to-[var(--sage-light)]/40 flex items-center justify-center">
-                                    <svg viewBox="0 0 120 120" fill="none" class="w-32 h-32 opacity-40">
-                                        <path d="M60 20C38.954 20 22 36.954 22 58s16.954 38 38 38 38-16.954 38-38S81.046 20 60 20z" fill="var(--mocha)" opacity=".3"/>
-                                        <path d="M45 58c0-8.284 6.716-15 15-15s15 6.716 15 15" stroke="var(--terra)" stroke-width="3" stroke-linecap="round"/>
-                                        <path d="M36 64c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="var(--mocha)" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
-                                        <circle cx="60" cy="66" r="6" fill="var(--terra)"/>
-                                    </svg>
+                                    <img src="{{ asset('images/hero1.png') }}" 
+                                        alt="Koleksi Benang Kasih" 
+                                        class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
@@ -84,7 +81,19 @@
         </div>
 
         {{-- Slide 2 --}}
-        <div class="carousel-slide flex-shrink-0 w-full relative flex items-center" style="min-height:90vh; background: linear-gradient(135deg, var(--sage-dark) 0%, #4a6640 100%);">
+        {{-- SESUDAH: tambahkan gambar background --}}
+        <div class="carousel-slide flex-shrink-0 w-full relative flex items-center"
+            style="min-height:90vh;">
+            {{-- Background foto --}}
+            <div class="absolute inset-0">
+                <img src="{{ asset('images/hero2.png') }}"
+                    alt="Background"
+                    class="w-full h-full object-cover">
+                {{-- Overlay hijau di atas foto --}}
+                <div class="absolute inset-0"
+                    style="background: linear-gradient(135deg, rgba(74,102,64,.85) 0%, rgba(74,102,64,.75) 100%)">
+                </div>
+            </div>
             <div class="absolute inset-0 overflow-hidden">
                 <svg class="absolute -bottom-16 -left-16 opacity-10 w-96 h-96" viewBox="0 0 300 300">
                     <circle cx="150" cy="150" r="140" stroke="white" stroke-width="1" fill="none" stroke-dasharray="8 6"/>
@@ -126,9 +135,10 @@
                        class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
                         <div class="aspect-square overflow-hidden bg-[var(--cream)]">
                             @if($fp->image)
-                                <img src="{{ $fp->image_url }}" alt="{{ $fp->name }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="{{ $fp->image_url }}" alt="{{ $fp->name }}" 
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             @else
-                                <div class="w-full h-full flex items-center justify-center text-4xl bg-gradient-to-br from-[var(--cream)] to-[var(--cream-dark)]">{{ $fp->category->icon }}</div>
+                                 <div class="w-full h-full flex items-center justify-center text-4xl bg-gradient-to-br from-[var(--cream)] to-[var(--cream-dark)]">{{ $fp->category->icon }}</div>
                             @endif
                         </div>
                         <div class="p-3">
