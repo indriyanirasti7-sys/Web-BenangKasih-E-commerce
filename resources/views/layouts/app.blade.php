@@ -196,6 +196,7 @@
             <div class="hidden lg:flex items-center gap-8">
                 <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
                 <a href="{{ route('gallery') }}" class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}">Galeri</a>
+                <a href="#main-footer" class="nav-link hover:text-[var(--terra-light)] transition-colors">Kontak</a>
 
                 {{-- Kategori Dropdown --}}
                 <div class="dropdown relative">
@@ -280,7 +281,8 @@
         {{-- MOBILE MENU --}}
         <div id="mobileMenu" class="lg:hidden hidden mt-4 bg-white rounded-2xl shadow-xl border border-[var(--cream-dark)] p-4 space-y-1">
             <a href="{{ route('home') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm font-medium">🏠 Beranda</a>
-            <a href="{{ route('gallery') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm font-medium">🖼 Galeri</a>
+            <a href="{{ route('gallery') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm font-medium">🖼️ Galeri</a>
+            <a href="#main-footer" onclick="toggleMenu()" class="block px-3 py-2 rounded-md hover:text-[var(--terra-light)]">☎️ Kontak</a>
             @foreach($navCats as $nc)
             <a href="{{ route('home') }}?category={{ $nc->slug }}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[var(--cream)] text-sm">
                 {{ $nc->icon }} {{ $nc->name }}
@@ -327,7 +329,7 @@
 {{-- ══════════════════════════════════════════════════════════════════════
      FLOATING WHATSAPP BUTTON
 ══════════════════════════════════════════════════════════════════════════ --}}
-<a href="https://wa.me/{{ config('shop.whatsapp_number', '6281234567890') }}"
+<a href="https://wa.me/{{ config('shop.whatsapp_number', '6285876177101') }}"
    target="_blank" rel="noopener noreferrer"
    class="wa-float fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer"
    style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%)"
@@ -340,7 +342,7 @@
 {{-- ══════════════════════════════════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════════════════════════════════════ --}}
-<footer class="bg-[var(--charcoal)] text-[var(--cream)] mt-24">
+<footer id="main-footer" class="bg-[var(--charcoal)] text-[var(--cream)] mt-24 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
             {{-- Brand Col --}}

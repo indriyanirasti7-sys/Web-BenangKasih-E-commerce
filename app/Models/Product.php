@@ -72,37 +72,62 @@ class Product extends Model
         return asset('images/placeholder.jpg');
     }
  
-    public function getWhatsappMessageAttribute(): string
+    public function generateWhatsappMessage($nama = '', $alamat = '', $warna = '-') : string
     {
         $lines = [];
         $lines[] = "Halo Kak! 👋";
         $lines[] = "Saya tertarik dengan produk berikut:";
         $lines[] = "";
+        
+        // ─── DATA UTAMA PRODUK ───
         $lines[] = "🧶 *{$this->name}*";
-        $lines[] = "📂 Kategori : {$this->category->name}";
+        
+        // Mengambil icon dan nama kategori melalui relasi belongsTo
+        if ($this->category) {
+            $icon = $this->category->icon ?? '📂';
+            $lines[] = "{$icon} Kategori : {$this->category->name}";
+        }
+        
         $lines[] = "💰 Harga    : {$this->formatted_price}";
         $lines[] = "📦 Status   : {$this->status_label}";
 
+        // ─── DETAIL SPESIFIKASI PRODUK (Mengecek jika data ada) ───
         if ($this->size) {
             $lines[] = "📏 Ukuran   : {$this->size}";
         }
-        if ($this->colors) {
-            $lines[] = "🎨 Warna    : " . implode(', ', $this->colors);
-        }
+        
+        // Menampilkan warna yang dipilih user di form (default: token underscore untuk JS .replace)
+        $lines[] = "🎨 Warna    : " . ($warna ?: '-');
+
+        // Jika statusnya Pre-Order, tampilkan estimasi pengerjaannya
         if ($this->status === 'pre_order' && $this->estimated_days) {
             $lines[] = "⏳ Estimasi : {$this->estimated_days} hari kerja";
         }
+
+        // Menampilkan info bahan/material benang jika diisi di database
         if ($this->yarn_type) {
             $lines[] = "🪡 Bahan    : {$this->yarn_type}";
         }
+        if ($this->material) {
+            $lines[] = "🧵 Detail   : {$this->material}";
+        }
 
         $lines[] = "";
+        
+        // ─── DATA PENGIRIMAN DOMESTIK (Menggunakan token penanda untuk diganti oleh JS) ───
+        $lines[] = "📍 *Data Pengiriman Penerima:*";
+        $lines[] = "👤 Nama     : " . ($nama ?: '___NAMA_PEMBELI___');
+        $lines[] = "🏠 Alamat   : " . ($alamat ?: '___ALAMAT_PEMBELI___');
+        $lines[] = "";
+        
+        // ─── LINK INFORMASI ───
         $lines[] = "🔗 Link Produk:";
         $lines[] = url('/produk/' . $this->slug);
         $lines[] = "";
         $lines[] = "Bisa info lebih lanjut untuk pemesanannya? 🙏";
 
-        return urlencode(implode("\n", $lines));
+        // Satukan baris array menjadi satu string teks utuh dengan enter (\n)
+        return implode("\n", $lines);
     }
  
     public function scopeActive($query)
