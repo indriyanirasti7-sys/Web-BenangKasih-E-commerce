@@ -221,6 +221,8 @@
             </div>
             <form method="GET" action="{{ route('home') }}" class="flex gap-2 w-full sm:w-auto flex-wrap sm:flex-nowrap">
                 @if(request('category'))<input type="hidden" name="category" value="{{ request('category') }}">@endif
+                
+                {{-- Input Search --}}
                 <div class="relative flex-1 sm:w-56">
                     <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari produk..."
                            class="w-full pl-9 pr-4 py-2.5 rounded-full border border-[var(--cream-dark)] bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--terra)]/25 focus:border-[var(--terra)]">
@@ -228,11 +230,24 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>
                 </div>
-                <select name="status" class="px-4 py-2.5 rounded-full border border-[var(--cream-dark)] bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--terra)]/25">
-                    <option value="">Semua Status</option>
-                    <option value="ready_stock" {{ request('status') === 'ready_stock' ? 'selected' : '' }}>Ready Stock</option>
-                    <option value="pre_order"   {{ request('status') === 'pre_order'   ? 'selected' : '' }}>Pre-Order</option>
-                </select>
+                
+                {{-- ✨ Dropdown Semua Status Custom Membulat (Aesthetic) --}}
+                <div class="relative flex-1 sm:flex-initial">
+                    <select name="status" 
+                            class="appearance-none w-full sm:w-auto pl-4 pr-10 py-2.5 rounded-full border border-[var(--cream-dark)] bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--terra)]/25 cursor-pointer text-[var(--mocha)]">
+                        <option value="">Semua Status</option>
+                        <option value="ready_stock" {{ request('status') === 'ready_stock' ? 'selected' : '' }}>Ready Stock</option>
+                        <option value="pre_order"   {{ request('status') === 'pre_order'   ? 'selected' : '' }}>Pre-Order</option>
+                    </select>
+                    {{-- Ikon panah kustom tipis --}}
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3.5 text-[var(--mocha)]">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                </div>
+
+                {{-- Tombol Filter --}}
                 <button type="submit" class="bg-[var(--terra)] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[var(--terra-dark)] transition-colors shadow-sm">Filter</button>
             </form>
         </div>

@@ -97,12 +97,7 @@
             </a>
 
             <div class="border-t border-white/10 my-2"></div>
-
-            <a href="{{ route('admin.products.create') }}"
-               class="sidebar-link flex items-center gap-3 px-4 py-2.5 text-white/70 text-sm font-medium">
-                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                Tambah Produk
-            </a>
+            
             <a href="{{ route('home') }}" target="_blank"
                class="sidebar-link flex items-center gap-3 px-4 py-2.5 text-white/70 text-sm font-medium">
                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
