@@ -60,18 +60,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ---
 ---
-## Dokumentasi Database
-<p align="center">
-  <img src="Images/db1.png" width="400">
-  <img src="Images/db2.png" width="400">
-  <img src="Images/db3.png" width="400">
-  <img src="Images/db4.png" width="400">
-  <img src="Images/db5.png" width="400">
-  <img src="Images/db6.png" width="400">
-  <img src="Images/db7.png" width="400">
-  <img src="Images/db8.png" width="400">
-</p>
-
 ## Dokumentasi BS
 <p align="center">
   <img src="Images/bs1.png" width="400">
@@ -93,4 +81,18 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
   <img src="Images/bs17.png" width="400">
 </p>
 
-![image alt](https://github.com/indriyanirasti7-sys/Web-BenangKasih-E-commerce/blob/6fcca204429187740a15acf39dbb53b24f05f511/Images/bs1.png)
+
+## Dokumentasi Database
+<p align="center">
+  <img src="Images/db1.png" width="400">
+  <img src="Images/db2.png" width="400">
+  <img src="Images/db3.png" width="400">
+  <img src="Images/db4.png" width="400">
+  <img src="Images/db5.png" width="400">
+  <img src="Images/db6.png" width="400">
+  <img src="Images/db7.png" width="400">
+  <img src="Images/db8.png" width="400">
+</p>
+
+
+
