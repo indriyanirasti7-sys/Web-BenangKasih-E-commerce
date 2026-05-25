@@ -62,23 +62,23 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ---
 ## Dokumentasi BS
 <p align="center">
-  <img src="Images/bs1.png" width="400">
-  <img src="Images/bs2.png" width="400">
   <img src="Images/bs3.png" width="400">
-  <img src="Images/bs4.png" width="400">
-  <img src="Images/bs5.png" width="400">
-  <img src="Images/bs6.png" width="400">
-  <img src="Images/bs7.png" width="400">
-  <img src="Images/bs8.png" width="400">
-  <img src="Images/bs9.png" width="400">
-  <img src="Images/bs10.png" width="400">
   <img src="Images/bs11.png" width="400">
-  <img src="Images/bs12.png" width="400">
-  <img src="Images/bs13.png" width="400">
   <img src="Images/bs14.png" width="400">
-  <img src="Images/bs15.png" width="400">
   <img src="Images/bs16.png" width="400">
-  <img src="Images/bs17.png" width="400">
+  <img src="Images/admin.png" width="400">
+  <img src="Images/dashboard.png" width="400">
+  <img src="Images/galeri.png" width="400">
+  <img src="Images/katalog.png" width="400">
+  <img src="Images/kategori.png" width="400">
+  <img src="Images/kontak.png" width="400">
+  <img src="Images/login.png" width="400">
+  <img src="Images/profiladmin.png" width="400">
+  <img src="Images/profilcustomer.png" width="400">
+  <img src="Images/register.png" width="400">
+  <img src="Images/tambahgaleri.png" width="400">
+  <img src="Images/tambahkategori.png" width="400">
+  <img src="Images/tambahproduk.png" width="400">
 </p>
 
 
