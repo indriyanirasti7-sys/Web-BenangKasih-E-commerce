@@ -56,3 +56,40 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+---
+## Dokumentasi Database
+
+<p align="center">
+  <img src="Images/db1.png" width="400">
+  <img src="Images/db2.png" width="400">
+  <img src="Images/db3.png" width="400">
+  <img src="Images/db4.png" width="400">
+  <img src="Images/db5.png" width="400">
+  <img src="Images/db6.png" width="400">
+  <img src="Images/db7.png" width="400">
+  <img src="Images/db8.png" width="400">
+</p>
+
+## Dokumentasi BS
+
+<p align="center">
+  <img src="Images/bs1.png" width="400">
+  <img src="Images/bs2.png" width="400">
+  <img src="Images/bs3.png" width="400">
+  <img src="Images/bs4.png" width="400">
+  <img src="Images/bs5.png" width="400">
+  <img src="Images/bs6.png" width="400">
+  <img src="Images/bs7.png" width="400">
+  <img src="Images/bs8.png" width="400">
+  <img src="Images/bs9.png" width="400">
+  <img src="Images/bs10.png" width="400">
+  <img src="Images/bs11.png" width="400">
+  <img src="Images/bs12.png" width="400">
+  <img src="Images/bs13.png" width="400">
+  <img src="Images/bs14.png" width="400">
+  <img src="Images/bs15.png" width="400">
+  <img src="Images/bs16.png" width="400">
+  <img src="Images/bs17.png" width="400">
+</p>
