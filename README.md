@@ -94,5 +94,41 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
   <img src="Images/db8.png" width="400">
 </p>
 
+# Benang & Kasih 🧶
+
+Benang & Kasih adalah website katalog produk rajutan handmade yang dibuat untuk membantu promosi dan penjualan produk rajutan secara online dengan tampilan modern, estetik, dan user friendly. Website ini dirancang dengan nuansa hangat dan cozy yang sesuai dengan tema handmade sehingga memberikan pengalaman visual yang nyaman bagi pengguna.
+
+Website ini menyediakan katalog produk rajutan yang dapat diakses dengan mudah melalui desktop maupun smartphone. Pengguna dapat melihat berbagai produk rajutan dengan tampilan yang rapi dan menarik, kemudian melakukan pemesanan secara langsung melalui WhatsApp tanpa perlu login atau membuat akun terlebih dahulu.
+
+---
+
+# ✨ Keunggulan Website
+
+- Tampilan modern dan estetik sesuai tema handmade
+- Responsive di berbagai ukuran layar
+- Sistem pemesanan cepat melalui WhatsApp
+- User friendly dan mudah digunakan
+- Layout produk rapi dan nyaman dilihat
+- Website ringan dengan performa cepat
+- Navigasi sederhana sehingga mudah dipahami pengguna
+
+---
+
+# 🚀 Fitur Utama
+
+- Katalog produk rajutan handmade
+- Tombol pemesanan langsung ke WhatsApp
+- Responsive mobile design
+- Tampilan modern dan clean
+- Navigasi sederhana
+- Product showcase yang menarik
+
+---
+
+# 🎯 Tujuan Pembuatan Website
+
+Website ini dibuat untuk membantu pelaku usaha handmade mempromosikan produk rajutan secara online dengan tampilan yang profesional dan mudah digunakan. Selain itu, website ini juga bertujuan mempermudah komunikasi antara penjual dan pembeli melalui integrasi WhatsApp sebagai media pemesanan utama.
+
+
 
 
