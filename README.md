@@ -60,27 +60,40 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ---
 ---
-## Website
-<p align="center">
-  <img src="Images/bs3.png" width="400">
-  <img src="Images/bs11.png" width="400">
-  <img src="Images/bs14.png" width="400">
-  <img src="Images/bs16.png" width="400">
-  <img src="Images/admin.png" width="400">
-  <img src="Images/dashboard.png" width="400">
-  <img src="Images/galeri.png" width="400">
-  <img src="Images/katalog.png" width="400">
-  <img src="Images/kategori.png" width="400">
-  <img src="Images/kontak.png" width="400">
-  <img src="Images/login.png" width="400">
-  <img src="Images/profiladmin.png" width="400">
-  <img src="Images/profilcustomer.png" width="400">
-  <img src="Images/register.png" width="400">
-  <img src="Images/tambahgaleri.png" width="400">
-  <img src="Images/tambahkategori.png" width="400">
-  <img src="Images/tambahproduk.png" width="400">
-</p>
+## 🖼️ Tampilan Aplikasi
 
+<p align="center">
+  <!-- Sesi Awal/Autentikasi -->
+  <img src="gambar/login.png" width="300" alt="Login">
+  <img src="gambar/register.png" width="300" alt="Register">
+  
+  <!-- Sesi Dashboard -->
+  <img src="gambar/dashboard admin.png" width="300" alt="Dashboard Admin">
+  <img src="gambar/dashboard user.png" width="300" alt="Dashboard User">
+  
+  <!-- Sesi Produk & Katalog -->
+  <img src="gambar/produk.png" width="300" alt="Produk">
+  <img src="gambar/halaman produk.png" width="300" alt="Halaman Produk">
+  <img src="gambar/kategori.png" width="300" alt="Kategori">
+  <img src="gambar/galeri.png" width="300" alt="Galeri">
+  
+  <!-- Sesi Transaksi -->
+  <img src="gambar/keranjang.png" width="300" alt="Keranjang">
+  <img src="gambar/checkout.png" width="300" alt="Checkout">
+  <img src="gambar/pesanan saya.png" width="300" alt="Pesanan Saya">
+  <img src="gambar/rincian pesanan.png" width="300" alt="Rincian Pesanan">
+  
+  <!-- Sesi Admin & Pengguna -->
+  <img src="gambar/admin produk.png" width="300" alt="Admin Produk">
+  <img src="gambar/admin galeri.png" width="300" alt="Admin Galeri">
+  <img src="gambar/pesanan.png" width="300" alt="Pesanan">
+  <img src="gambar/pelanggan.png" width="300" alt="Pelanggan">
+  <img src="gambar/profil admin.png" width="300" alt="Profil Admin">
+  <img src="gambar/profil user.png" width="300" alt="Profil User">
+  <img src="gambar/rating.png" width="300" alt="Rating">
+  <img src="gambar/kontak.png" width="300" alt="Kontak">
+  <img src="gambar/detail pesanan.png" width="300" alt="Detail Pesanan">
+</p>
 
 ## 🗄️ Struktur Database
 
