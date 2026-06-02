@@ -94,40 +94,42 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
   <img src="Images/db8.png" width="400">
 </p>
 
+
+
 # Benang & Kasih 🧶
 
-Benang & Kasih adalah website katalog produk rajutan handmade yang dibuat untuk membantu promosi dan penjualan produk rajutan secara online dengan tampilan modern, estetik, dan user friendly. Website ini dirancang dengan nuansa hangat dan cozy yang sesuai dengan tema handmade sehingga memberikan pengalaman visual yang nyaman bagi pengguna.
+Benang & Kasih adalah platform katalog produk rajutan *handmade* yang dirancang untuk memberikan pengalaman belanja yang hangat, estetik, dan terorganisir. Website ini hadir untuk membantu pelanggan memilih produk rajutan favorit mereka dengan lebih leluasa melalui fitur keranjang belanja sebelum melakukan pemesanan akhir.
 
-Website ini menyediakan katalog produk rajutan yang dapat diakses dengan mudah melalui desktop maupun smartphone. Pengguna dapat melihat berbagai produk rajutan dengan tampilan yang rapi dan menarik, kemudian melakukan pemesanan secara langsung melalui WhatsApp tanpa perlu login atau membuat akun terlebih dahulu.
+Website ini mengusung nuansa *cozy* yang mencerminkan keunikan produk *handmade*, namun tetap mempertahankan performa modern yang responsif. Dengan alur belanja yang intuitif, pelanggan dapat mengumpulkan pilihan produk mereka ke dalam keranjang, meninjau kembali pesanan, dan kemudian mengirimkan daftar pesanan tersebut secara otomatis melalui WhatsApp kepada penjual.
 
 ---
 
 # ✨ Keunggulan Website
 
-- Tampilan modern dan estetik sesuai tema handmade
-- Responsive di berbagai ukuran layar
-- Sistem pemesanan cepat melalui WhatsApp
-- User friendly dan mudah digunakan
-- Layout produk rapi dan nyaman dilihat
-- Website ringan dengan performa cepat
-- Navigasi sederhana sehingga mudah dipahami pengguna
+* **Pengalaman Belanja Teratur:** Fitur keranjang memungkinkan pelanggan memilih banyak produk sekaligus sebelum memesan.
+* **Tampilan Estetik:** Desain modern dan *clean* yang menonjolkan keindahan tekstur produk rajutan.
+* **Responsif:** Tampilan yang nyaman diakses baik melalui *desktop* maupun *smartphone*.
+* **Integrasi WhatsApp:** Mempermudah komunikasi langsung antara penjual dan pembeli dengan detail pesanan yang sudah rapi.
+* **Ringan & Cepat:** Performa website optimal untuk kenyamanan pengguna.
+* **Tanpa Akun Rumit:** Pelanggan dapat langsung berbelanja tanpa harus melalui proses registrasi yang panjang.
 
 ---
 
 # 🚀 Fitur Utama
 
-- Katalog produk rajutan handmade
-- Tombol pemesanan langsung ke WhatsApp
-- Responsive mobile design
-- Tampilan modern dan clean
-- Navigasi sederhana
-- Product showcase yang menarik
+* **Katalog Produk Interaktif:** *Showcase* produk rajutan dengan detail yang jelas.
+* **Sistem Keranjang Belanja:** Fitur tambah ke keranjang untuk mengelola daftar belanja pelanggan sebelum *checkout*.
+* **Keranjang ke WhatsApp:** Mengonversi isi keranjang belanja menjadi pesan terformat yang siap dikirim ke WhatsApp penjual.
+* **Responsive Mobile Design:** Pengalaman belanja yang mulus di perangkat genggam.
+* **Navigasi Sederhana:** Memudahkan pengguna menemukan produk tanpa hambatan.
 
 ---
 
 # 🎯 Tujuan Pembuatan Website
 
-Website ini dibuat untuk membantu pelaku usaha handmade mempromosikan produk rajutan secara online dengan tampilan yang profesional dan mudah digunakan. Selain itu, website ini juga bertujuan mempermudah komunikasi antara penjual dan pembeli melalui integrasi WhatsApp sebagai media pemesanan utama.
+Website ini dibuat untuk memberikan pengalaman belanja *online* yang lebih baik bagi pelanggan produk *handmade*. Dengan adanya fitur keranjang, pelanggan dapat membuat daftar pesanan mereka sendiri, sehingga proses transaksi menjadi lebih terstruktur, minim kesalahan, dan mempercepat komunikasi antara pembeli dan penjual melalui integrasi WhatsApp.
+
+
 
 
 
