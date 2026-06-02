@@ -82,17 +82,49 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 </p>
 
 
-## Database
-<p align="center">
-  <img src="Images/db1.png" width="400">
-  <img src="Images/db2.png" width="400">
-  <img src="Images/db3.png" width="400">
-  <img src="Images/db4.png" width="400">
-  <img src="Images/db5.png" width="400">
-  <img src="Images/db6.png" width="400">
-  <img src="Images/db7.png" width="400">
-  <img src="Images/db8.png" width="400">
-</p>
+## 🗄️ Struktur Database
+
+Berikut adalah skema tabel database yang digunakan dalam aplikasi Mobile-POS:
+
+### 1. Tabel `users`
+| Kolom | Tipe Data | Keterangan |
+| :--- | :--- | :--- |
+| `id` | BigInt (PK) | ID unik pengguna |
+| `name` | String | Nama pengguna |
+| `email` | String | Email pengguna |
+| `role` | String | Hak akses (Admin/Kasir) |
+| `email_verified_at` | Timestamp | Waktu verifikasi email |
+| `password` | String | Password terenkripsi |
+| `remember_token` | String | Token sesi |
+| `created_at` | Timestamp | Waktu pembuatan |
+| `updated_at` | Timestamp | Waktu pembaruan |
+
+### 2. Tabel `categories`
+| Kolom | Tipe Data | Keterangan |
+| :--- | :--- | :--- |
+| `id` | BigInt (PK) | ID unik kategori |
+| `name` | String | Nama kategori |
+| `slug` | String | URL friendly name |
+| `icon` | String | Nama/path icon |
+| `description` | Text | Deskripsi kategori |
+| `sort_order` | Integer | Urutan tampilan |
+| `created_at` | Timestamp | Waktu pembuatan |
+| `updated_at` | Timestamp | Waktu pembaruan |
+
+### 3. Tabel `product_images`
+| Kolom | Tipe Data | Keterangan |
+| :--- | :--- | :--- |
+| `id` | BigInt (PK) | ID unik gambar |
+| `product_id` | BigInt (FK) | Relasi ke tabel products |
+| `image` | String | Path/URL gambar |
+| `caption` | String | Judul/keterangan gambar |
+| `alt` | String | Teks alternatif |
+| `sort_order` | Integer | Urutan tampilan |
+| `is_featured` | Boolean | Tandai sebagai gambar utama |
+| `created_at` | Timestamp | Waktu pembuatan |
+| `updated_at` | Timestamp | Waktu pembaruan |
+
+
 
 
 
