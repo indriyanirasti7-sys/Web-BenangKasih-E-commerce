@@ -60,7 +60,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ---
 ---
-## Dokumentasi BS
+## Website
 <p align="center">
   <img src="Images/bs3.png" width="400">
   <img src="Images/bs11.png" width="400">
@@ -82,7 +82,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 </p>
 
 
-## Dokumentasi Database
+## Database
 <p align="center">
   <img src="Images/db1.png" width="400">
   <img src="Images/db2.png" width="400">
